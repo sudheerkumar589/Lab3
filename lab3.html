@@ -1,0 +1,43 @@
+<script
+src="http://maps.googleapis.com/maps/api/js?key=AIzaSyDY0kkJiTPVd2U7aTOAwhc9ySH6oHxOIYM&sensor=false">
+</script>
+<img src="http://chart.finance.yahoo.com/z?s=GOOG&t=12m&q=l&z=l&p=m50,m200
+" height="100" width="500">
+<title>MASH UP APPLICATION EXAMPLE</title>
+<script>
+
+// Set location to centre on
+var myCenter=new google.maps.LatLng(51.508742,-0.120850);
+
+// Set other locations in array first title for marker, second coords
+var locations = [
+['marker title1', -13.530825,-71.957565],
+['marker title2', -13.531211,-71.961921],
+['marker title3', -13.531336,-71.960387],
+['marker title4', -13.533099,-71.960151],
+['marker title5', -13.533985,-71.960751],
+['marker title6', -13.535289,-71.962929],
+
+['marker title7', -13.516617,-71.978872],
+['marker title8', -13.515626,-71.975873],
+['marker title9', -13.531847,-71.984493],
+['marker title10', -13.50123,-72.031091],
+['marker title11', -13.163152,-72.54581]
+];
+
+
+function initialize()
+{
+
+//apply location marker to centre on
+var mapProp = {
+  center:myCenter,
+  zoom:5,
+  mapTypeId:google.maps.MapTypeId.ROADMAP
+  };
+var marker=new google.maps.Marker({
+  position:myCenter,
+     animation:google.maps.Animation.BOUNCE
+  });
+
+marker.setMap(map);
